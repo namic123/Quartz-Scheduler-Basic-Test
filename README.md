@@ -19,12 +19,6 @@ Java 17과 Spring Boot 3.4.4, Quartz Scheduler를 기반으로 한 배치 스케
 
 ---
 
-## 📁 프로젝트 구조
-
-src └── main ├── java │ └── study.quartzschedulertest │ ├── config/ # Quartz 설정 관련 클래스 │ │ ├── QuartzConfig.java # SchedulerFactoryBean 설정 │ │ └── AutowiringSpringBeanJobFactory.java # Job에 Spring 의존성 주입을 위한 설정 │ ├── job/ # 배치 Job 정의 및 실제 실행 클래스 │ │ ├── AbstractSchedulerJob.java # Job 등록 공통 로직 추상 클래스 │ │ ├── TestSimpleJob.java # 테스트용 Job 설정 클래스 │ │ └── TestSimpleProcessor.java # 실제 실행되는 Job 처리 클래스 │ ├── listener/ # Quartz 리스너 구현체 │ │ ├── JobCustomListener.java # Job 실행 상태 로그 리스너 │ │ └── TriggerCustomListener.java # Trigger 상태 로그 리스너 │ └── QuartzSchedulerTestApplicationRunner.java # 앱 시작 시 Job 등록 수행 클래스 └── resources ├── application.yml # Spring 설정 파일 ├── quartz.properties # Quartz 고급 설정 └── tables_h2.sql # H2 Database용 Quartz 테이블 스키마
-
----
-
 ## 🚀 실행 방법
 
 ### 1. 의존성 설치
